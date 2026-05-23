@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Disturbance - Documentation</title>
+  <style>
+    :root {
+      --bg: #08111a;
+      --panel: #101c2a;
+      --panel-2: #142437;
+      --line: #27415d;
+      --text: #e8f1fb;
+      --muted: #94abc3;
+      --accent: #6ce0ff;
+      --ok: #72f1b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1622, var(--bg));
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    .hero, .card {
+      background: rgba(16, 28, 42, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+    }
+    .hero {
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    h1, h2, h3 { margin-top: 0; }
+    h1 { font-size: clamp(30px, 5vw, 44px); margin-bottom: 8px; }
+    h2 { font-size: 24px; margin-bottom: 14px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .card { padding: 22px; }
+    .shot {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #091521;
+    }
+    .caption {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .features {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .feature {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+    }
+    .feature h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+      color: var(--ok);
+    }
+    .feature p { margin: 0; }
+    ul.meta {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    a { color: var(--accent); }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="badge">Project Documentation</div>
+      <h1>Drone Disturbance</h1>
+      <p>Drone Disturbance is a browser-based 2D drone flying game focused on unstable flight, environmental hazards, and control mastery.</p>
+      <ul class="meta">
+        <li>Playable modes: Campaign, Challenge, Sandbox Lab, and Controls/Tuning</li>
+        <li>Tech stack: HTML, CSS, and JavaScript</li>
+        <li>Main app entry: <a href="../index.html">index.html</a></li>
+      </ul>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Application Screenshot</h2>
+        <img class="shot" src="../assets/drone-disturbance-screenshot.png" alt="Drone Disturbance application screenshot" />
+        <div class="caption">Current game interface showing the sidebar, HUD, and live gameplay canvas.</div>
+      </section>
+
+      <section class="card">
+        <h2>Implemented Features</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Core Flight Model</h3>
+            <p>Responsive drone movement with thrust, tilt, momentum, gravity, drag, and battery behavior.</p>
+          </article>
+          <article class="feature">
+            <h3>Disturbance System</h3>
+            <p>Dynamic wind, turbulence, and payload imbalance create changing flight conditions.</p>
+          </article>
+          <article class="feature">
+            <h3>Hazards and Fail States</h3>
+            <p>Collisions, danger zones, no-fly areas, and payload damage produce readable mission failures.</p>
+          </article>
+          <article class="feature">
+            <h3>Mission Objectives</h3>
+            <p>Reach targets, hold positions, pass checkpoints, inspect points, and deliver payloads.</p>
+          </article>
+          <article class="feature">
+            <h3>Campaign Progression</h3>
+            <p>Structured level unlocks, medal goals, and persistent progress support long-term play.</p>
+          </article>
+          <article class="feature">
+            <h3>Assists and Tuning</h3>
+            <p>Recommended presets plus stability and agility sliders make the game accessible and customizable.</p>
+          </article>
+          <article class="feature">
+            <h3>HUD and Telemetry</h3>
+            <p>Live objective, timer, score, status, warning, battery, and optional telemetry displays.</p>
+          </article>
+          <article class="feature">
+            <h3>Input and Rebinding</h3>
+            <p>Keyboard and gamepad support with configurable action bindings for fast retries.</p>
+          </article>
+          <article class="feature">
+            <h3>Tutorials and Onboarding</h3>
+            <p>Intro levels and plain-language prompts teach movement, hovering, and disturbance response.</p>
+          </article>
+          <article class="feature">
+            <h3>Challenge and Sandbox Modes</h3>
+            <p>Replayable score-focused challenges and a free-fly lab for testing tuning and disturbances.</p>
+          </article>
+          <article class="feature">
+            <h3>MVP Level Pack</h3>
+            <p>Multiple handcrafted levels across lab, rooftop, canyon, factory, and storm themes.</p>
+          </article>
+          <article class="feature">
+            <h3>Audio and Visual Feedback</h3>
+            <p>Motor and wind cues, warnings, and readable effects improve clarity during high-pressure flying.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
