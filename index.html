@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Disturbance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h1>Drone Disturbance</h1>
+      <p class="tag">Fight instability. Master the air.</p>
+
+      <section class="panel">
+        <h2>Modes</h2>
+        <div class="button-grid">
+          <button data-view="campaign">Campaign</button>
+          <button data-view="challenge">Challenge</button>
+          <button data-view="sandbox">Sandbox Lab</button>
+          <button data-view="settings">Controls</button>
+        </div>
+      </section>
+
+      <section id="menu-panel" class="panel"></section>
+
+      <section class="panel small">
+        <h2>Quick Help</h2>
+        <ul>
+          <li>Thrust: <span data-bind-label="thrust">W</span></li>
+          <li>Tilt left/right: <span data-bind-label="left">A</span> / <span data-bind-label="right">D</span></li>
+          <li>Stabilize/boost: <span data-bind-label="stabilize">Shift</span></li>
+          <li>Restart: <span data-bind-label="restart">R</span></li>
+          <li>Telemetry: <span data-bind-label="telemetry">T</span></li>
+        </ul>
+        <p class="tiny">Gamepad supported: left stick + RT + A + Y.</p>
+      </section>
+    </aside>
+
+    <main id="main">
+      <div id="hud">
+        <div class="hud-row top">
+          <div id="objective-box" class="hud-box"></div>
+          <div id="timer-box" class="hud-box"></div>
+          <div id="score-box" class="hud-box"></div>
+        </div>
+        <div class="hud-row bottom">
+          <div id="status-box" class="hud-box"></div>
+          <div id="battery-box" class="hud-box"></div>
+          <div id="warning-box" class="hud-box warning"></div>
+        </div>
+      </div>
+
+      <canvas id="game" width="1280" height="720"></canvas>
+      <canvas id="telemetry" width="320" height="180"></canvas>
+
+      <div id="overlay"></div>
+      <div id="prompt"></div>
+      <div id="results" class="hidden"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
